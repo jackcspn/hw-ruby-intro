@@ -13,9 +13,9 @@ def max_2_sum arr
 	end
 	
 	max = arr.max	
-	arr.delete_at(arr.index(max))		# find the largest number and delete it
-	if !arr.empty?						# check if the array has more than 1 number
-		max += arr.max  				# add up the second largest number
+	arr.delete_at(arr.index(max))	# find the largest number and delete it
+	if !arr.empty?					# check if the array has more than 1 number
+		max += arr.max  			# add up the second largest number
 	end
 	return max
 end
@@ -27,7 +27,7 @@ def sum_to_n? arr, n
 	end
 		
 	arr.each do |i|
-		j = n - i												# find if there is a j that makes j + i == n
+		j = n - i			# find if there is a j that makes j + i == n
 		if arr.include?(j)
 			if (i == j ) && arr.count(i) == 1 then next end		# j can not be the same element as i
 			return true
@@ -43,15 +43,15 @@ def hello(name)
 end
 
 def starts_with_consonant? s
-  	if (('a'..'z') === s[0]) || (('A'...'Z') === s[0])		# check if the first element is a letter	
-  		return !("AEIOUaeiou".include? s[0])				# check if the letter is a consonant
+  	if (('a'..'z') === s[0]) || (('A'...'Z') === s[0])	# check if the first element is a letter	
+  		return !("AEIOUaeiou".include? s[0])			# check if the letter is a consonant
   	end
   	
   	return false												
 end
 
 def binary_multiple_of_4? s
-  if s.size < 2						# if s has 0 or 1 element, the only case that s is a binary mutiple of 4 is is s equals "0"			
+  if s.size < 2			# if s has 0 or 1 element, the only case that s is a binary mutiple of 4 is is s equals "0"			
   	return s == "0"						
   end
   
